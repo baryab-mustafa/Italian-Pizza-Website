@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admin Demo | Italian Pizza</title>
+<meta name="description" content="Demo admin dashboard for Italian Pizza: orders, products, categories, member cards, deals and customers.">
+<!-- Demo and staging build: remove the robots tag below when the site goes live on the real domain. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- Replace https://example.com with the live domain at launch. -->
+<link rel="canonical" href="https://example.com/admin.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Italian Pizza">
+<meta property="og:title" content="Admin Demo | Italian Pizza">
+<meta property="og:description" content="Demo admin dashboard for Italian Pizza: orders, products, categories, member cards, deals and customers.">
+<meta property="og:url" content="https://example.com/admin.html">
+<meta property="og:image" content="https://example.com/assets/og-placeholder.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C42E18">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body data-page="admin" class="adm-body">
+<a class="skip-link" href="#adm-main">Skip to content</a>
+<div id="gate" class="gate">
+<form class="panel" id="signin-form" novalidate aria-labelledby="gate-h">
+<a class="brand" href="index.html" aria-label="Italian Pizza, back to the website"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#C42E18"/><path d="M32 54 12 20q20-11 40 0z" fill="#fff"/><path d="M12 20q20-11 40 0" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="29" r="3.6" fill="#C42E18"/><circle cx="38" cy="29" r="3.6" fill="#C42E18"/><circle cx="32" cy="40" r="3.6" fill="#C42E18"/></svg><span class="brand-text">Italian <span>Pizza</span></span></a>
+<h1 id="gate-h" style="font-size:1.6rem">Admin demo</h1>
+<p class="notice"><i data-lucide="info" aria-hidden="true"></i><span>Sign-in is mocked in this demo. Use the prefilled details or any values. All data here is sample data.</span></p>
+<div class="field"><label for="adm-user">Username</label><input id="adm-user" value="demo" autocomplete="username"></div>
+<div class="field"><label for="adm-pass">Password</label><input id="adm-pass" type="password" value="demo" autocomplete="current-password"><p class="field-error" id="signin-err" role="alert"></p></div>
+<button class="btn btn-primary" type="submit">Sign in</button>
+</form>
+</div>
+<div id="app" hidden>
+<header class="adm-top"><div class="container" style="max-width:1280px"><a class="brand" href="index.html"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#C42E18"/><path d="M32 54 12 20q20-11 40 0z" fill="#fff"/><path d="M12 20q20-11 40 0" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="29" r="3.6" fill="#C42E18"/><circle cx="38" cy="29" r="3.6" fill="#C42E18"/><circle cx="32" cy="40" r="3.6" fill="#C42E18"/></svg><span class="brand-text">Italian <span>Pizza</span></span><span class="tag-admin">Admin demo</span></a><div class="links"><a href="index.html">View website</a><button type="button" id="signout">Sign out</button></div></div></header>
+<div class="adm-shell">
+<nav class="adm-nav" aria-label="Admin sections"><ul id="adm-nav-list"></ul></nav>
+<main class="adm-main" id="adm-main" tabindex="-1"></main>
+</div>
+</div>
+<dialog id="adm-dlg" class="sheet" aria-labelledby="adm-dlg-title"></dialog>
+<script src="assets/app.js"></script>
+<script src="assets/admin.js"></script>
+</body>
+</html>

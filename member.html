@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Member Card | Italian Pizza</title>
+<meta name="description" content="Check your Italian Pizza member card number to see member prices, or request a new member card.">
+<!-- Demo and staging build: remove the robots tag below when the site goes live on the real domain. -->
+<meta name="robots" content="noindex, nofollow">
+<!-- Replace https://example.com with the live domain at launch. -->
+<link rel="canonical" href="https://example.com/member.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Italian Pizza">
+<meta property="og:title" content="Member Card | Italian Pizza">
+<meta property="og:description" content="Check your Italian Pizza member card number to see member prices, or request a new member card.">
+<meta property="og:url" content="https://example.com/member.html">
+<meta property="og:image" content="https://example.com/assets/og-placeholder.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#C42E18">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="member" class="has-bottom-nav">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="demo-bar"><div class="container"><span>Demo version. Photos, menu items, prices and deals are examples.</span><button type="button" data-demo-guide>About this demo</button></div></div>
+<header class="site-header">
+<div class="container bar">
+<a class="brand" href="index.html" aria-label="Italian Pizza, home"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#C42E18"/><path d="M32 54 12 20q20-11 40 0z" fill="#fff"/><path d="M12 20q20-11 40 0" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="29" r="3.6" fill="#C42E18"/><circle cx="38" cy="29" r="3.6" fill="#C42E18"/><circle cx="32" cy="40" r="3.6" fill="#C42E18"/></svg><span class="brand-text">Italian <span>Pizza</span></span></a>
+<nav class="nav-desktop" aria-label="Main"><a href="index.html" data-nav="home">Home</a><a href="menu.html" data-nav="menu">Menu</a><a href="deals.html" data-nav="deals">Deals</a><a href="member.html" data-nav="member">Member Card</a><a href="about.html" data-nav="about">About</a><a href="contact.html" data-nav="contact">Contact</a><a href="cart.html" data-nav="cart">Cart <span class="cart-count" data-cart-count data-zero="true">0</span></a></nav>
+<div class="bar-actions">
+<a class="btn btn-primary btn-order" href="menu.html#pizza">Order Now</a>
+<a class="cart-link" href="cart.html" data-cart-label aria-label="Cart"><i data-lucide="shopping-bag" aria-hidden="true"></i><span class="lbl">Cart</span><span class="cart-count" data-cart-count data-zero="true">0</span></a>
+<button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav"><i data-lucide="menu" aria-hidden="true"></i><span class="lbl">Menu</span></button>
+</div>
+</div>
+<nav id="mobile-nav" class="nav-mobile" aria-label="Main" hidden><ul><li><a href="index.html" data-nav="home">Home</a></li><li><a href="menu.html" data-nav="menu">Menu</a></li><li><a href="deals.html" data-nav="deals">Deals</a></li><li><a href="member.html" data-nav="member">Member Card</a></li><li><a href="about.html" data-nav="about">About</a></li><li><a href="contact.html" data-nav="contact">Contact</a></li><li><a class="btn btn-primary btn-block" href="menu.html#pizza">Order Now</a></li></ul></nav>
+</header>
+<main id="main" tabindex="-1">
+<div class="container page-head"><h1>Member Card</h1><p>Check your Italian Pizza member card to see member prices on eligible items.</p></div>
+<div class="container" style="padding-bottom:24px">
+<div class="grid-cards" style="align-items:start">
+<section class="panel" aria-labelledby="have-h">
+<h2 id="have-h">Already have an Italian Pizza Member Card?</h2>
+<p>Enter your card number to check your membership.</p>
+<form id="verify-form" novalidate style="display:grid;gap:14px">
+<div class="field"><label for="card-no">Member Card Number</label><input id="card-no" name="card" type="text" autocomplete="off" autocapitalize="characters" aria-describedby="card-hint verify-error"><span class="hint" id="card-hint">Demo card numbers: IP1001 is valid, IP1002 is inactive, IP1003 is expired.</span><p class="field-error" id="verify-error" role="alert"></p></div>
+<button class="btn btn-basil" type="submit">Verify Card</button>
+</form>
+<div id="verify-result" hidden></div>
+</section>
+<section class="panel" aria-labelledby="no-h">
+<h2 id="no-h">Don't have a Member Card?</h2>
+<p>Send a membership request with your name, phone and address. In the live site, Italian Pizza would review it and give you a card number.</p>
+<button class="btn btn-primary" type="button" id="open-join">Get a Member Card</button>
+<p class="muted" style="font-size:.9rem">Demo only. The request stays in this browser and shows up in the admin demo.</p>
+</section>
+</div>
+<section class="prose" style="margin-top:32px" aria-labelledby="how-m">
+<h2 id="how-m">How member prices work</h2>
+<p>Member prices apply to eligible items only. Eligible items are marked on the menu. The discount rules will follow Italian Pizza's real membership scheme, which is set up before launch.</p>
+<p>Once your card is verified on this device, member prices show on the menu, in your cart and at checkout.</p>
+</section>
+</div>
+<dialog id="join-dialog" class="sheet" aria-labelledby="join-title">
+<div class="dlg-head"><h2 id="join-title">Get a Member Card</h2><button type="button" class="dlg-close" data-close aria-label="Close">&times;</button></div>
+<div class="dlg-body">
+<form id="join-form" novalidate style="display:grid;gap:16px">
+<div class="field"><label for="j-name">Name</label><input id="j-name" autocomplete="name" aria-describedby="j-name-err"><p class="field-error" id="j-name-err" role="alert"></p></div>
+<div class="field"><label for="j-phone">Phone</label><input id="j-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03XX XXXXXXX" aria-describedby="j-phone-err"><p class="field-error" id="j-phone-err" role="alert"></p></div>
+<div class="field"><label for="j-address">Address</label><textarea id="j-address" autocomplete="street-address" aria-describedby="j-address-err"></textarea><p class="field-error" id="j-address-err" role="alert"></p></div>
+<button class="btn btn-primary" type="submit">Submit Membership Request</button>
+</form>
+<div id="join-done" hidden><h3 tabindex="-1">Request received</h3><p style="margin:8px 0 16px">This is a demo, so nothing was sent. In the live site, Italian Pizza would review the request and contact you with a card number.</p><button type="button" class="btn btn-primary" data-close>Close</button></div>
+</div>
+</dialog>
+
+</main>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand" href="index.html" aria-label="Italian Pizza, home"><svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#C42E18"/><path d="M32 54 12 20q20-11 40 0z" fill="#fff"/><path d="M12 20q20-11 40 0" fill="none" stroke="#F2B632" stroke-width="5" stroke-linecap="round"/><circle cx="26" cy="29" r="3.6" fill="#C42E18"/><circle cx="38" cy="29" r="3.6" fill="#C42E18"/><circle cx="32" cy="40" r="3.6" fill="#C42E18"/></svg><span class="brand-text">Italian <span>Pizza</span></span></a>
+<p style="margin-top:12px">Pizza and fast food in Dera Ismail Khan, Pakistan. Browse the menu, check deals and order online.</p></div>
+<div><h2>Order</h2><ul><li><a href="menu.html">Menu</a></li><li><a href="deals.html">Deals</a></li><li><a href="member.html">Member Card</a></li><li><a href="cart.html">Cart</a></li><li><a href="order-status.html">Order Status</a></li></ul></div>
+<div><h2>Information</h2><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms and Conditions</a></li></ul></div>
+<div><h2>Visit</h2><p>Dera Ismail Khan (D.I. Khan), Pakistan</p><p style="margin-top:8px"><span class="placeholder-chip">Address and phone to be confirmed</span></p></div>
+</div>
+<div class="container footer-base"><span>&copy; 2026 Italian Pizza. Demo version, not yet live.</span><a href="admin.html">Admin demo</a></div>
+</footer>
+<nav class="bottom-nav" aria-label="Quick navigation"><ul>
+<li><a href="index.html" data-nav="home"><i data-lucide="house" aria-hidden="true"></i><span>Home</span></a></li>
+<li><a href="menu.html" data-nav="menu"><i data-lucide="utensils" aria-hidden="true"></i><span>Menu</span></a></li>
+<li><a href="cart.html" data-nav="cart" data-cart-label><i data-lucide="shopping-bag" aria-hidden="true"></i><span>Cart</span><span class="cart-count" data-cart-count data-zero="true">0</span></a></li>
+<li><a href="member.html" data-nav="member"><i data-lucide="credit-card" aria-hidden="true"></i><span>Member</span></a></li>
+</ul></nav>
+<script src="assets/app.js"></script>
+</body>
+</html>

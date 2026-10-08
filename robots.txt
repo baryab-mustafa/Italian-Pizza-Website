@@ -1,0 +1,9 @@
+# Demo and staging: block all crawlers. Replace with the production rules below at launch.
+User-agent: *
+Disallow: /
+
+# Production rules (use after launch, with the real domain):
+# User-agent: *
+# Allow: /
+# Disallow: /admin
+# Sitemap: https://example.com/sitemap.xml
